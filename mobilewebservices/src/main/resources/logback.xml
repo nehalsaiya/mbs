@@ -1,0 +1,32 @@
+<configuration scan="true">
+  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>mylogfile.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>%d{yyyyMMdd}_mylogfile.log</fileNamePattern>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%date{yyyyMMdd HH:mm:ss} %contextName[%thread] %level %logger{0} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="com.myapp" level="WARN">
+    <appender-ref ref="FILE" />
+  </logger>
+
+  <logger name="h2database" level="TRACE">
+    <appender-ref ref="FILE" />
+  </logger> -->
+
+  <root level="INFO">
+    <appender-ref ref="FILE" />
+    <appender-ref ref="CONSOLE" />
+  </root>
+</configuration>

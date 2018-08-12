@@ -1,0 +1,9 @@
+#Rest Endpoint
+http://localhost:9090/
+
+# H2 Console 
+http://localhost:9090/h2
+
+# Swagger API docs 
+http://localhost:9090/v2/api-docs
+http://localhost:9090/swagger-ui.html
