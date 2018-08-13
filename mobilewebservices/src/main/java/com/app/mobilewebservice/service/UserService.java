@@ -26,5 +26,11 @@ public class UserService {
 		return userRepository.updateUserStatus(userVO.getUid(),userVO.isStatus());
 	}
 
+	@Transactional
+	public int updateUserGCM(UserVO userVO) {
+		// TODO Auto-generated method stub
+		return userRepository.updateUserGCM(userVO.getUid(),userVO.getGcmId());
+	}
+
 	
 }

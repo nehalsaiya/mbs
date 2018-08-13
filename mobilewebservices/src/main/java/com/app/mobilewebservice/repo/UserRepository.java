@@ -12,4 +12,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	@Query("update User u set u.status = ?2 where u.uid = ?1")
 	public int updateUserStatus(String uid, boolean status);
 
+	@Modifying
+	@Query("update User u set u.gcmId = ?2 where u.uid = ?1")
+	public int updateUserGCM(String uid, String gcmId);
+
 }
