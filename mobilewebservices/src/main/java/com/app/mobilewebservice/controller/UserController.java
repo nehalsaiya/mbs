@@ -42,4 +42,10 @@ public class UserController {
 		return i;
 	}
 
+	@RequestMapping(value = "/updateGcm", method = RequestMethod.POST, produces = "application/json",consumes="application/json")
+	public int updateGCM(@RequestBody UserVO userVO){
+		System.out.println(userVO);
+		int i = userService.updateUserGCM(userVO);
+		return i;
+	}
 }
