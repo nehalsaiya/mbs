@@ -13,7 +13,7 @@ public final static String API_URL_FCM ="https://fcm.googleapis.com/fcm/send";
 
          // userDeviceIdKey is the device id you will query from your database
 
-    public void pushFCMNotification(String userDeviceIdKey, String title, String message) throws Exception{
+    public static void pushFCMNotification(String userDeviceIdKey, String title, String message) throws Exception{
 
     String authKey = AUTH_KEY_FCM;   // You FCM AUTH key
     String FMCurl = API_URL_FCM;     

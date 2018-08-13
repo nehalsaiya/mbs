@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.app.mobilewebservice.entity.User;
 import com.app.mobilewebservice.service.UserService;
+import com.app.mobilewebservice.vo.MessageVO;
 import com.app.mobilewebservice.vo.UserVO;
 
 import io.swagger.annotations.Api;
@@ -46,6 +47,13 @@ public class UserController {
 	public int updateGCM(@RequestBody UserVO userVO){
 		System.out.println(userVO);
 		int i = userService.updateUserGCM(userVO);
+		return i;
+	}
+	
+	@RequestMapping(value = "/publishMessage", method = RequestMethod.POST, produces = "application/json",consumes="application/json")
+	public int updateGCM(@RequestBody MessageVO messageVO){
+		System.out.println(messageVO);
+		int i = userService.publishMessage(messageVO);
 		return i;
 	}
 }
