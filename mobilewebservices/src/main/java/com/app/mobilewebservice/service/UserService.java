@@ -39,7 +39,7 @@ public class UserService {
 
 	@Transactional
 	public int publishMessage(MessageVO messageVO) {
-		List<User> users = userRepository.findByStaus(true);
+		List<User> users = userRepository.findByStatus(true);
 		int flag=1;
 		for (User user : users) {
 			try {

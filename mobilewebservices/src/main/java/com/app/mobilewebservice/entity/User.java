@@ -81,7 +81,7 @@ public class User implements Serializable {
 	public void setGcmId(String gcmId) {
 		this.gcmId = gcmId;
 	}
-	public boolean isStatus() {
+	public boolean getStatus() {
 		return status;
 	}
 	public void setStatus(boolean status) {

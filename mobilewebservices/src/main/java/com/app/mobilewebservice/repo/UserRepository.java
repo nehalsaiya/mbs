@@ -18,6 +18,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	@Query("update User u set u.gcmId = ?2 where u.uid = ?1")
 	public int updateUserGCM(String uid, String gcmId);
 
-	public List<User> findByStaus(boolean status);
+	public List<User> findByStatus(boolean status);
 
 }
